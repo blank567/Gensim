@@ -1,0 +1,10 @@
+# Python 3.10；保留 llm 环境现有 NumPy，不涉及 PyTorch/CUDA。
+numpy==1.26.4
+scipy==1.15.3
+gensim==4.4.0
+scikit-learn==1.7.2
+jieba==0.42.1
+matplotlib==3.10.7
+pytest==9.1.1
+# jieba 0.42.1 仍导入 pkg_resources，固定已验证可用的现有版本。
+setuptools==80.9.0

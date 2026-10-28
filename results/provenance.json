@@ -1,0 +1,182 @@
+{
+  "experiment_date": "2026-10-22",
+  "labels": "newspaper page numbers, not manually annotated topics",
+  "python": "3.10.19",
+  "packages": {
+    "numpy": "1.26.4",
+    "scipy": "1.15.3",
+    "gensim": "4.4.0",
+    "scikit-learn": "1.7.2",
+    "jieba": "0.42.1",
+    "matplotlib": "3.10.7",
+    "joblib": "1.6.0",
+    "threadpoolctl": "3.7.0"
+  },
+  "training_parameters": {
+    "seed": 42,
+    "workers": 1,
+    "vector_size": 64,
+    "epochs": 8,
+    "window": 5,
+    "min_count": 3,
+    "bucket": 50000,
+    "negative": 5,
+    "ns_exponent": 0.75,
+    "sample": 0.001,
+    "min_article_tokens": 30,
+    "min_df": 2,
+    "max_vocab": 20000,
+    "lsi_topics": 64,
+    "lda_topics": 12,
+    "lda_passes": 3,
+    "train_end": "19980119",
+    "validation_end": "19980124",
+    "class_sets": {
+      "2": [
+        "page_01",
+        "page_06"
+      ],
+      "4": [
+        "page_01",
+        "page_06",
+        "page_08",
+        "page_05"
+      ],
+      "6": [
+        "page_01",
+        "page_06",
+        "page_08",
+        "page_05",
+        "page_02",
+        "page_04"
+      ]
+    },
+    "svm_c_grid": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "fasttext_variants": [
+      {
+        "name": "sg_ngram_2_4",
+        "sg": 1,
+        "min_n": 2,
+        "max_n": 4
+      },
+      {
+        "name": "sg_ngram_3_6",
+        "sg": 1,
+        "min_n": 3,
+        "max_n": 6
+      },
+      {
+        "name": "cbow_ngram_2_4",
+        "sg": 0,
+        "min_n": 2,
+        "max_n": 4
+      }
+    ],
+    "stability_seeds": [
+      43,
+      44
+    ]
+  },
+  "inputs": [
+    {
+      "filename": "1998-01-2003版-带音.txt",
+      "bytes": 5320005,
+      "sha256": "37b85555df2f72642ff9815ac01f51d4f50024d80ca0e2e8a6be6f93b1038639",
+      "encoding": "gb18030"
+    },
+    {
+      "filename": "1998-02-2003版-带音.txt",
+      "bytes": 5441098,
+      "sha256": "a050351664f459aed2247bc45cd46c25da2ce893e11c44a9dea06a54529f19d8",
+      "encoding": "gb18030"
+    },
+    {
+      "filename": "1998-03-2003版-带音.txt",
+      "bytes": 5951910,
+      "sha256": "2f9d8ecfd92eec1b8a7009bd146da5faad218a34ae17fe460944bd772b2e97db",
+      "encoding": "gb18030"
+    }
+  ],
+  "data_counts": {
+    "raw_articles": 8663,
+    "short_articles_removed": 344,
+    "duplicates_removed": 5,
+    "january_articles": 2991,
+    "external_zh_articles": 5323,
+    "january_tokens": 771527,
+    "external_zh_tokens": 1655498
+  },
+  "split_label_counts": {
+    "train": {
+      "page_01": 185,
+      "page_02": 260,
+      "page_03": 198,
+      "page_04": 266,
+      "page_05": 169,
+      "page_06": 190,
+      "page_07": 124,
+      "page_08": 78,
+      "page_09": 73,
+      "page_10": 91,
+      "page_11": 101,
+      "page_12": 62
+    },
+    "validation": {
+      "page_01": 58,
+      "page_02": 76,
+      "page_03": 34,
+      "page_04": 84,
+      "page_05": 65,
+      "page_06": 66,
+      "page_07": 55,
+      "page_08": 47,
+      "page_09": 47,
+      "page_10": 41,
+      "page_11": 34,
+      "page_12": 36
+    },
+    "test": {
+      "page_01": 66,
+      "page_02": 107,
+      "page_03": 97,
+      "page_04": 66,
+      "page_05": 22,
+      "page_06": 41,
+      "page_07": 27,
+      "page_08": 29,
+      "page_09": 25,
+      "page_10": 18,
+      "page_11": 28,
+      "page_12": 25
+    }
+  },
+  "original_verification": {
+    "split_integrity": true,
+    "fit_scope_verified": true,
+    "input_sha256_verified": true,
+    "source_snapshots_match_installed": true,
+    "saved_predictions": {
+      "tfidf": {
+        "prediction_rows": 158,
+        "identical_after_reload": true
+      },
+      "fasttext_mean": {
+        "prediction_rows": 158,
+        "identical_after_reload": true
+      },
+      "fasttext_tfidf": {
+        "prediction_rows": 158,
+        "identical_after_reload": true
+      }
+    },
+    "new_jieba_input_vector_shape": [
+      1,
+      64
+    ],
+    "new_input_finite_nonzero": true
+  }
+}

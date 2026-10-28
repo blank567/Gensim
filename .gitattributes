@@ -1,0 +1,3 @@
+# 统一文本换行，避免 Windows 生成的 CRLF 干扰 Git 差异检查。
+* text=auto eol=lf
+*.png binary

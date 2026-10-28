@@ -1,0 +1,43 @@
+# 本地学习资料：按要求保留在本机，不上传。
+/docs/
+
+# 原始/处理后语料、训练模型、日志和运行产物。
+/data/
+/artifacts/
+*.gensim
+*.model
+*.bin
+*.npy
+*.npz
+*.pt
+*.pth
+*.log
+*.partial
+
+# Python 缓存、临时文件、构建产物和虚拟环境。
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+env/
+build/
+dist/
+*.egg-info/
+
+# 本机配置、凭据和编辑器状态。
+/configs/local.json
+/configs/*.local.json
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# results/ 只收录主动整理的轻量实验汇总和图表，不收录逐文语料或模型。

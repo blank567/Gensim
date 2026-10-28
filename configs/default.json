@@ -1,0 +1,37 @@
+{
+  "sources": [
+    "data/raw/1998-01-2003版-带音.txt",
+    "data/raw/1998-02-2003版-带音.txt",
+    "data/raw/1998-03-2003版-带音.txt"
+  ],
+  "seed": 42,
+  "workers": 1,
+  "vector_size": 64,
+  "epochs": 8,
+  "window": 5,
+  "min_count": 3,
+  "bucket": 50000,
+  "negative": 5,
+  "ns_exponent": 0.75,
+  "sample": 0.001,
+  "min_article_tokens": 30,
+  "min_df": 2,
+  "max_vocab": 20000,
+  "lsi_topics": 64,
+  "lda_topics": 12,
+  "lda_passes": 3,
+  "train_end": "19980119",
+  "validation_end": "19980124",
+  "class_sets": {
+    "2": ["page_01", "page_06"],
+    "4": ["page_01", "page_06", "page_08", "page_05"],
+    "6": ["page_01", "page_06", "page_08", "page_05", "page_02", "page_04"]
+  },
+  "svm_c_grid": [0.1, 1.0, 10.0],
+  "fasttext_variants": [
+    {"name": "sg_ngram_2_4", "sg": 1, "min_n": 2, "max_n": 4},
+    {"name": "sg_ngram_3_6", "sg": 1, "min_n": 3, "max_n": 6},
+    {"name": "cbow_ngram_2_4", "sg": 0, "min_n": 2, "max_n": 4}
+  ],
+  "stability_seeds": [43, 44]
+}
